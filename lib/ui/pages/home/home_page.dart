@@ -41,6 +41,7 @@ class _HomePageState extends State<HomePage> {
                     return Card(
                       shape: new RoundedRectangleBorder(
                         side: new BorderSide(color: Colors.black54, width: 2.0),
+                        borderRadius: BorderRadius.circular(14),
                       ),
                       child: Container(
                         height: 290,
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                             // ),
                             ),
                         // margin: EdgeInsets.all(20),
-                        padding: EdgeInsets.all(20),
+                        // padding: EdgeInsets.all(20),
                         child: Stack(
                           children: [
                             Column(
@@ -72,31 +73,51 @@ class _HomePageState extends State<HomePage> {
                                 SizedBox(
                                   height: 10,
                                 ),
-                                Text(
-                                  '${dataProd.price} / ${dataProd.satuan}',
-                                  style: TextStyle(
-                                    color: Colors.blue,
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: Text(
+                                    '${dataProd.price} / ${dataProd.satuan}',
+                                    style: TextStyle(
+                                      color: Colors.blue,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
                                   height: 5,
                                 ),
-                                Text(
-                                  'Min.Order Qty / ${dataProd.minimumOrder} / ${dataProd.satuan} ',
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: Text(
+                                    'Min.Order Qty / ${dataProd.minimumOrder} / ${dataProd.satuan} ',
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 5,
                                 ),
-                                Text('${dataProd.locationName}'),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: Text('${dataProd.locationName}'),
+                                ),
                                 SizedBox(
                                   height: 10,
                                 ),
-                                Align(
-                                  alignment: Alignment.centerRight,
-                                  child: Text(
-                                    'DETAIL >',
-                                    style: TextStyle(
-                                      color: Colors.blue,
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Text(
+                                      'DETAIL >',
+                                      style: TextStyle(
+                                        color: Colors.blue,
+                                      ),
                                     ),
                                   ),
                                 ),
