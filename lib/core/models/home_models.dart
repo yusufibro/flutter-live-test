@@ -114,7 +114,7 @@ class Datum {
     this.stock,
     this.keterangan,
     this.idWms,
-    // this.minimumOrder,
+    this.minimumOrder,
   });
 
   int? id;
@@ -166,7 +166,7 @@ class Datum {
   Stock? stock;
   dynamic keterangan;
   String? idWms;
-  // int? minimumOrder;
+  num? minimumOrder;
 
   factory Datum.fromJson(String str) => Datum.fromMap(json.decode(str));
 
@@ -222,7 +222,7 @@ class Datum {
         stock: Stock.fromJson(json["stock"]),
         keterangan: json["keterangan"],
         idWms: json["id_wms"],
-        // minimumOrder: json["minimum_order"],
+        minimumOrder: json["minimum_order"],
       );
 
   Map<String, dynamic> toMap() => {
@@ -275,7 +275,7 @@ class Datum {
         "stock": stock?.toJson(),
         "keterangan": keterangan,
         "id_wms": idWms,
-        // "minimum_order": minimumOrder,
+        "minimum_order": minimumOrder,
       };
 }
 

@@ -15,7 +15,6 @@ class HomeController extends GetxController {
     print('response ' + response.body);
 
     var responseDataModel = ModelDataProducts.fromJson(response.body);
-    print('hasil :' + responseDataModel.data!.dataProducts!.toString());
     return responseDataModel.data!.dataProducts!;
   }
 }
