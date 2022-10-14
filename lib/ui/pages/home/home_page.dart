@@ -78,6 +78,23 @@ class _HomePageState extends State<HomePage> {
                                     horizontal: 20,
                                   ),
                                   child: Text(
+                                    '${dataProd.name}',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 20,
+                                  ),
+                                  child: Text(
                                     '${dataProd.price} / ${dataProd.satuan}',
                                     style: TextStyle(
                                       color: Colors.blue,
